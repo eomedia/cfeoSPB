@@ -3,7 +3,7 @@
 
 ColdFusion stored procedure broker - dynamically builds cfstoredproc calls - works with mssql
 
-cfeoSPB sits between you calling CF page and the stored procedure within MSSQL and automates the the process of building your cfstoredproc calls.  In addition to the major savings in writing a ton of code, it also helps prevent code breaks when a SP is updated with non-required varaibles.  
+cfeoSPB sits between you calling CF page and the stored procedure within MSSQL and automates the process of building your cfstoredproc calls.  In addition to the major savings in writing a ton of code, it also helps prevent code breaks when a SP is updated with non-required varaibles.  
 
 cfeoSPB dynamically builds the SP by comparing the stored procedure varaibles against the data passed in the dataStruct and when no match is found it passes the parameter as a NULL variable.  This means that if you update a SP with an optional flag value you do not need to change any cfstoredproc tags in your code because you didn't write any to start with.
 
@@ -13,6 +13,13 @@ cfeoSPB dynamically builds the SP by comparing the stored procedure varaibles ag
 ##Dual licensed under the MIT and GPL licenses:
 * http://www.opensource.org/licenses/mit-license.php
 * http://www.gnu.org/license
+```
+
+```
+## cfeoSPB parameters
+@param 	spName  	name of the stored procedure
+@param  dataStruct 	optional argument containing a structure of parameters
+@param  resultSets	set the number of resultSets being returned from the stored procedure
 ```
 
 ```
@@ -43,10 +50,6 @@ cfeoSPB dynamically builds the SP by comparing the stored procedure varaibles ag
 
 	
 	cfeoSPB method:
-	
-	@param 	spName  	name of the stored procedure
-	@param  dataStruct 	optional argument containing a structure of parameters
-	@param  resultSets	set the number of resultSets being returned from the stored procedure
 
 	<cfset cfeoSPB = createObject("component","path_to_cfc.cfeoSPB").Init("MyDatasourceName") />
 
