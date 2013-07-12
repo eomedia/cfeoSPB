@@ -332,7 +332,7 @@
 			<cfsavecontent variable="content">
 				<cfdump var='#arguments#' label='arguments'><cfdump var='#cfcatch#' label='cfcatch'>
 			</cfsavecontent>
-			<cfset getEmail().sendEmail(from="lmaj",type="error",subject="error[model.gateways.cfeoSPB].callSP",content=content) />
+			<!--- example of integration with email gateway <cfset getEmail().sendEmail(from="",type="error",subject="error[model.gateways.cfeoSPB].callSP",content=content) /> --->
 						
 		</cfcatch>
 		
