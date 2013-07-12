@@ -12,6 +12,9 @@
  	http://www.opensource.org/licenses/mit-license.php
  	http://www.gnu.org/license
 
+ 	@credit Bob Silverberg's SPCaller on which this is based/modified
+ 	- includes modifications to work with multiple record sets, uniqueidentifier, NULLs
+
 
 	Usage:
 	
